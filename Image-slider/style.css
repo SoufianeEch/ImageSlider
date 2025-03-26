@@ -1,0 +1,25 @@
+* {
+  font-family: fira code;
+  transition: all ease 100ms;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+  height: 100dvh;
+}
+.enable {
+  background-color: #6f6fff;
+  border: none;
+  padding: 10px;
+  color: #fff;
+}
+
+.disable{
+  padding: 10px;
+  background-color: #fff;
+  color: black;
+}
