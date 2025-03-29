@@ -1,25 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
 * {
-  font-family: fira code;
+  font-family: fira code, "Roboto Mono";
   transition: all ease 100ms;
 }
-body {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin: 0;
-  align-items: center;
-  justify-content: center;
-  height: 100dvh;
-}
-.enable {
-  background-color: #6f6fff;
-  border: none;
-  padding: 10px;
-  color: #fff;
+svg {
+  fill: white;
+  width: 25px;
+  height: 25px;
 }
 
-.disable{
-  padding: 10px;
-  background-color: #fff;
-  color: black;
+body {
+  margin: 0;
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100dvh;
+  gap: 10px;
+  background: #141414;
+}
+.slider {
+  position: relative;
+}
+.slider img {
+  display: none;
+  width: 500px;
+  border-radius: 10px;
+}
+/* Button style */
+.slider button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  height: 30%;
+  top: 50%;
+  background-color: hsla(0, 0%, 100%, 0.3);
+  border: 0;
+  transform: translateY(-50%);
+  box-shadow: inset 0 0 5px white;
+}
+.slider .prev {
+  border-radius: 5px 0 0 5px;
+  left: -35px;
+}
+.slider .next {
+  border-radius:0 5px 5px 0;
+  right: -35px;
+}
+img.displaySlide {
+  display: block;
+}
+
+/* Hover */
+.slider button:hover {
+  background-color: hsla(0, 0%, 100%, 0.5);
+}
+.slider .prev:hover {
+  left: -40px;
+}
+.slider .next:hover {
+  right: -40px;
+}
+.slider button:active {
+  background-color: hsla(0, 0%, 100%, 0.3);
+  scale: 0.9;
 }
